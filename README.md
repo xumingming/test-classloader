@@ -13,6 +13,7 @@ So the jars in `/tmp` are:
 $ ls /tmp/*.jar
 /tmp/testlib-user.jar  /tmp/user-topology.jar
 ```
+These two jars contains the `User Topology`'s code and its dependencies.
 
 ## Run the test
 ```bash
@@ -21,6 +22,8 @@ java -cp bin:../testlib-storm/bin/
      -Djava.system.class.loader=xumingmingv.classloader.TopologyClassLoader 
      xumingmingv.classloader.StormCore
 ```
+
+`-cp bin:../testlib-storm/bin/` specifies the `Fake Storm Core Class` and its dependencies.
 
 ## Result
 ```bash
