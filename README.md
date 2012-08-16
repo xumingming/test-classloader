@@ -10,7 +10,9 @@ Before run the test, build the jar for `user-topology` and `testlib-user`, and p
 
 ## Run the test
 ```bash
-java -cp bin:../testlib-storm/bin/ -Djava.system.class.loader=xumingmingv.classloader.TopologyClassLoader xumingmingv.classloader.StormCore
+java -cp bin:../testlib-storm/bin/ 
+     -Djava.system.class.loader=xumingmingv.classloader.TopologyClassLoader 
+     xumingmingv.classloader.StormCore
 ```
 
 ## Result
