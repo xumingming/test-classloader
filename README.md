@@ -8,6 +8,12 @@ There are 4 eclipse projects in this repository:
 ## Preparation
 Before run the test, build the jar for `user-topology` and `testlib-user`, and put the two jars into `/tmp` folder, `TopologyClassLoader` will try to load the classes there.
 
+So the jars in `/tmp` are:
+```bash
+$ ls /tmp/*.jar
+/tmp/testlib-user.jar  /tmp/user-topology.jar
+```
+
 ## Run the test
 ```bash
 cd fake-storm
