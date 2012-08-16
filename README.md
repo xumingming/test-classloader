@@ -1,4 +1,4 @@
-h2. Overview
+## Overview
 There are 4 eclipse projects in this repository:
 fake-storm: plays the role of `Storm`
 user-topology: plays the role of `User Topology`
