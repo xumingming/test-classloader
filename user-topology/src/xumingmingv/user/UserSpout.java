@@ -12,7 +12,7 @@ public class UserSpout implements ISpout {
 		System.out.println("UserSpout: IPerson classloader: " + IPerson.class.getClassLoader());
 		System.out.println("UserSpout: Man classloader: " + man.getClass().getClassLoader());
 		System.out.println("UserSpout: ISpout classloader: " + ISpout.class.getClassLoader());
-		
-		man.hello();
+		System.out.println("UserSpout: Man#hello: " + man.hello());
+		;
 	}
 }

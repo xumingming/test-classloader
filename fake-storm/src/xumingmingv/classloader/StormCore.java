@@ -22,7 +22,7 @@ public class StormCore {
 		
 		// call the Man.foo() directly from StormCore
 		Man man = new Man();
-		man.hello();
+		System.out.println("StormCore: Man#hello: " + man.hello());
 
 		// call userSpout's foo, it will then call
 		// man.hello()

@@ -27,17 +27,22 @@ java -cp bin:../testlib-storm/bin/
 
 ## Result
 ```bash
+ClassLoader xumingmingv.classloader.StormCore
 StormCore: StormCore classloader: sun.misc.Launcher$AppClassLoader@1ef6a746
 StormCore: IPerson classloader: sun.misc.Launcher$AppClassLoader@1ef6a746
 StormCore: Man classloader: sun.misc.Launcher$AppClassLoader@1ef6a746
 StormCore: ISpout classloader: sun.misc.Launcher$AppClassLoader@1ef6a746
 StormCore: UserSpout classloader: xumingmingv.classloader.TopologyClassLoader@67386000
-I am Man (testlib-storm)
-UserClass: UserClass classloader: xumingmingv.classloader.TopologyClassLoader@67386000
-UserClass: IPerson classloader: xumingmingv.classloader.TopologyClassLoader@67386000
-UserClass: Man classloader: xumingmingv.classloader.TopologyClassLoader@67386000
-UserClass: ISpout classloader: sun.misc.Launcher$AppClassLoader@1ef6a746
-I am Man (testlib-user)
+StormCore: Man#hello: I am Man (testlib-storm)
+UserSpout: UserSpout classloader: xumingmingv.classloader.TopologyClassLoader@67386000
+UserSpout: IPerson classloader: xumingmingv.classloader.TopologyClassLoader@67386000
+UserSpout: Man classloader: xumingmingv.classloader.TopologyClassLoader@67386000
+UserSpout: ISpout classloader: sun.misc.Launcher$AppClassLoader@1ef6a746
+UserSpout: Man#hello: I am Man (testlib-user)
 ```
 
-We can see that the dependency is isolated(from `I am Man (testlib-storm)` and `I am Man (testlib-user)`)
+We can see that the dependency is isolated from these two lines:
+```bash
+StormCore: Man#hello: I am Man (testlib-storm)
+UserSpout: Man#hello: I am Man (testlib-user)
+```
